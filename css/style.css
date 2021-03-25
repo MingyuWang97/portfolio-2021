@@ -24,7 +24,8 @@ h2{
 
 nav li{
   display:inline;
-  padding-right:20px;
+  padding-right:10px;
+  line-height: 2;
 }
 
 nav a{
@@ -88,9 +89,10 @@ p {
 }
 
 .current{
+  padding: 10px;
   color: white;
   font-weight: bold;
-  background-color:rgb(248, 82, 82);
+  background-color:rgb(100, 100, 100);
 }
 
 .intro{
