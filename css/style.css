@@ -54,7 +54,31 @@ header p{
   text-align: center;
 }
 
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  z-index: 1;
+}
+
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
+}
+
 /* default style end */
+
+#map {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin:0;
+}
+
 img{
   width:90%;
 }
@@ -98,4 +122,55 @@ p {
 .intro{
   text-align: justify;
   line-height: 1.5;
+}
+
+/* tablet view*/
+@media screen and (min-width: 768px){
+  #map{
+    height: 500px;
+  }
+
+  h2{
+    text-align: center;
+  }
+
+  .picture_text{
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .picture_text:nth-child(odd) img{
+    width: 95%;
+    display: grid;
+    grid-column: 1/span 2;
+  }
+
+  .picture_text:nth-child(odd) .caption_text{
+    grid-column: 3 /span 1;
+  }
+
+  .picture_text:nth-child(even) img{
+    width: 95%;
+    display: grid;
+    grid-column: 2/span 2;
+  }
+
+  .picture_text:nth-child(even) .caption_text{
+    grid-row: 1;
+    grid-column: 1 /span 1;
+  }
+
+
+}
+
+
+
+/* desktop view*/
+@media screen and (min-width: 850px){
+
+}
+
+/* redueced motion */
+@media screen and (prefers-reduced-motion: reduce) {
 }

@@ -9,6 +9,7 @@
   </head>
   <body>
       <header>
+          <a class = "skip" href="#main">Skip to Main Content</a>
           <nav>
               <ul>
                   <li><a class = "current" href = "index.html">About</a></li>
@@ -20,13 +21,42 @@
           </nav>
       </header>
       <main>
-          <h1>About this site</h1>
+          <h1 id="main">About this site</h1>
           <p class = "intro">Hi, my name is Mingyu Wang. <br><br>
             When I began my undergraduate study, I joined the hiking club of my university. 
             From then on, I traveled and hiked all across China with some aweson friends I met in the club. 
             I think of the days in the nature as the shiniest part of my life whenever I look back to them. 
             So I decide to record them using this site.<br><br>
             This is not a photographic exihibition, it's just a record and remenmbrance of the past days. </p>
+          <script type="text/javascript" src="http://api.map.baidu.com/getscript?v=3.0&ak=WMSW6guaXDNqY2VbGmUIjgC8cZ8Yc9St"></script>
+          <br><br>
+          <h2>My Footprint </h2>
+          <div id="map"></div>
+          <script type="text/javascript"> 
+            var map = new BMap.Map("map");
+            map.centerAndZoom(new BMap.Point(109, 34.5), 3);   //center point and scale  
+            map.addControl(new BMap.NavigationControl());
+            map.addControl(new BMap.ScaleControl());    
+            map.addControl(new BMap.OverviewMapControl());    
+            map.addControl(new BMap.MapTypeControl());
+            // add my foot print
+            var marker1 = new BMap.Marker(new BMap.Point(109.019083, 30.348056));//lichuan
+            var marker2 = new BMap.Marker(new BMap.Point(105.154067, 38.490453));//tenggeli
+            var marker3 = new BMap.Marker(new BMap.Point(101.866667, 29.600000));//gongga
+            var marker4 = new BMap.Marker(new BMap.Point(103.029819, 31.620181));//laojun
+            var marker5 = new BMap.Marker(new BMap.Point(111.326944, 25.514889));//jiucai
+            var marker6 = new BMap.Marker(new BMap.Point(108.228056, 26.477222));//leigong
+            var marker7 = new BMap.Marker(new BMap.Point(114.016389, 26.289361));//nanfengmian
+            var marker8 = new BMap.Marker(new BMap.Point(113.542079,35.623671));//nantaihang       
+            map.addOverlay(marker1);
+            map.addOverlay(marker2);
+            map.addOverlay(marker3);
+            map.addOverlay(marker4);
+            map.addOverlay(marker5);
+            map.addOverlay(marker6);
+            map.addOverlay(marker7);
+            map.addOverlay(marker8);
+          </script>  
       </main>
       <footer>
           <p>&copy; Mingyu Wang, 2021</p>
