@@ -1,4 +1,8 @@
 /* default style */
+* {
+  font-family: 'Montserrat';
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -94,6 +98,11 @@ p {
   line-height: 1.2;
 }
 
+#contact_form{
+  background-color: #ddd;
+  align-items: center;
+}
+
 .picture_text{
   margin: auto;
   width:95%;
@@ -122,6 +131,18 @@ p {
 .intro{
   text-align: justify;
   line-height: 1.5;
+}
+
+/* animation */
+#anime h2{
+  animation-name: footprint;
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+
+@keyframes footprint {
+  from {color: red;}
+  to {color: rgb(45, 11, 194);}
 }
 
 /* tablet view*/
@@ -161,7 +182,6 @@ p {
     grid-column: 1 /span 1;
   }
 
-
 }
 
 
@@ -169,8 +189,15 @@ p {
 /* desktop view*/
 @media screen and (min-width: 850px){
 
+  .picture_text{
+    border: 5px #058ddb48 solid;
+  }
+
 }
 
 /* redueced motion */
 @media screen and (prefers-reduced-motion: reduce) {
+  #anime h2{
+    animation:none;
+  }
 }
